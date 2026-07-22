@@ -52,6 +52,35 @@ header p {
     color: var(--cor-secundaria);
 }
 
+/* Navegação */
+header nav {
+    margin-top: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: var(--cor-container);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: var(--cor-secundaria);
+}
+
+
 /* Seções */
 main section {
     background: var(--cor-container);
@@ -67,6 +96,38 @@ main h2 {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
+/* Habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.skill-category h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+}
+
+.skill p {
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+    background-color: var(--cor-secundaria);
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    transition: width 1.5s ease-in-out;
+}
+
 
 /* Seção de Contato */
 #contato p {
@@ -130,5 +191,16 @@ footer {
 
     header p {
         font-size: 1em;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
